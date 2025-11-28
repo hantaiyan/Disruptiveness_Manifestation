@@ -1,0 +1,46 @@
+{\rtf1\fs24
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx3744\clbrdrt\brdrs\cellx7056\clbrdrt\brdrs\cellx10368\clbrdrt\brdrs\cellx14544\clbrdrt\brdrs\cellx19872\clbrdrt\brdrs\cellx25200
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3744\cellx7056\cellx10368\cellx14544\cellx19872\cellx25200
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx3744\clbrdrb\brdrs\cellx7056\clbrdrb\brdrs\cellx10368\clbrdrb\brdrs\cellx14544\clbrdrb\brdrs\cellx19872\clbrdrb\brdrs\cellx25200
+\ql VARIABLES\cell\qc Dependent variable: Ni\cell\qc Dependent variable: Nj\cell\qc Dependent variable: Citation\cell\qc Dependent variable: Ni_foreign_ratio\cell\qc Dependent variable: Nj_foreign_ratio\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3744\cellx7056\cellx10368\cellx14544\cellx19872\cellx25200
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql novelty\cell\qc 0.197***\cell\qc 0.230***\cell\qc 0.229***\cell\qc 0.015***\cell\qc 0.016***\cell\row
+\ql \cell\qc (0.005)\cell\qc (0.006)\cell\qc (0.006)\cell\qc (0.002)\cell\qc (0.003)\cell\row
+\ql team_size\cell\qc 0.009***\cell\qc 0.011***\cell\qc 0.011***\cell\qc -0.002***\cell\qc -0.002***\cell\row
+\ql \cell\qc (0.002)\cell\qc (0.003)\cell\qc (0.002)\cell\qc (0.000)\cell\qc (0.001)\cell\row
+\ql first_author_productivity\cell\qc 0.000***\cell\qc 0.000***\cell\qc 0.000***\cell\qc -0.000***\cell\qc -0.000***\cell\row
+\ql \cell\qc (0.000)\cell\qc (0.000)\cell\qc (0.000)\cell\qc (0.000)\cell\qc (0.000)\cell\row
+\ql team_productivity\cell\qc 0.000\cell\qc 0.000\cell\qc 0.000\cell\qc -0.000\cell\qc 0.000\cell\row
+\ql \cell\qc (0.000)\cell\qc (0.000)\cell\qc (0.000)\cell\qc (0.000)\cell\qc (0.000)\cell\row
+\ql phrase_count\cell\qc -0.013***\cell\qc -0.017***\cell\qc -0.016***\cell\qc -0.001**\cell\qc 0.000\cell\row
+\ql \cell\qc (0.001)\cell\qc (0.001)\cell\qc (0.001)\cell\qc (0.000)\cell\qc (0.000)\cell\row
+\ql inter_coauthorship\cell\qc 0.032***\cell\qc 0.046***\cell\qc 0.040***\cell\qc 0.001\cell\qc 0.004\cell\row
+\ql \cell\qc (0.009)\cell\qc (0.010)\cell\qc (0.010)\cell\qc (0.004)\cell\qc (0.005)\cell\row
+\ql delay_year\cell\qc 0.154***\cell\qc 0.194***\cell\qc 0.181***\cell\qc 0.007***\cell\qc 0.006***\cell\row
+\ql \cell\qc (0.001)\cell\qc (0.002)\cell\qc (0.001)\cell\qc (0.000)\cell\qc (0.000)\cell\row
+\ql citation_dynamic\cell\qc \cell\qc \cell\qc \cell\qc 0.000*\cell\qc 0.000***\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc (0.000)\cell\qc (0.000)\cell\row
+\ql journal_tier_orig5\cell\qc -0.172***\cell\qc -0.201***\cell\qc -0.202***\cell\qc 0.016***\cell\qc 0.019***\cell\row
+\ql \cell\qc (0.003)\cell\qc (0.004)\cell\qc (0.004)\cell\qc (0.001)\cell\qc (0.002)\cell\row
+\ql 2004.year\cell\qc 0.224***\cell\qc 0.239***\cell\qc 0.259***\cell\qc 0.005\cell\qc 0.008*\cell\row
+\ql \cell\qc (0.008)\cell\qc (0.009)\cell\qc (0.009)\cell\qc (0.003)\cell\qc (0.005)\cell\row
+\ql 2009.year\cell\qc 0.298***\cell\qc 0.397***\cell\qc 0.369***\cell\qc 0.039***\cell\qc 0.050***\cell\row
+\ql \cell\qc (0.008)\cell\qc (0.009)\cell\qc (0.009)\cell\qc (0.003)\cell\qc (0.005)\cell\row
+\ql 2.field\cell\qc -0.008\cell\qc -0.043***\cell\qc -0.016\cell\qc 0.215***\cell\qc 0.162***\cell\row
+\ql \cell\qc (0.009)\cell\qc (0.010)\cell\qc (0.010)\cell\qc (0.004)\cell\qc (0.005)\cell\row
+\ql 3.field\cell\qc -0.109***\cell\qc -0.077***\cell\qc -0.109***\cell\qc 0.000\cell\qc 0.007*\cell\row
+\ql \cell\qc (0.006)\cell\qc (0.007)\cell\qc (0.007)\cell\qc (0.003)\cell\qc (0.004)\cell\row
+\ql 4.field\cell\qc 0.135***\cell\qc 0.008\cell\qc 0.113***\cell\qc 0.020***\cell\qc 0.076***\cell\row
+\ql \cell\qc (0.014)\cell\qc (0.016)\cell\qc (0.016)\cell\qc (0.005)\cell\qc (0.008)\cell\row
+\ql Constant\cell\qc 1.522***\cell\qc 0.604***\cell\qc 1.685***\cell\qc 0.285***\cell\qc 0.210***\cell\row
+\ql \cell\qc (0.013)\cell\qc (0.015)\cell\qc (0.015)\cell\qc (0.005)\cell\qc (0.007)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 61,201\cell\qc 61,201\cell\qc 61,201\cell\qc 61,201\cell\qc 43,462\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx3744\clbrdrb\brdrs\cellx7056\clbrdrb\brdrs\cellx10368\clbrdrb\brdrs\cellx14544\clbrdrb\brdrs\cellx19872\clbrdrb\brdrs\cellx25200
+\ql R-squared\cell\qc 0.346\cell\qc 0.376\cell\qc 0.367\cell\qc 0.066\cell\qc 0.036\cell\row
+\pard\qc
+Robust standard errors in parentheses\par
+*** p<0.01, ** p<0.05, * p<0.1\par
+}
