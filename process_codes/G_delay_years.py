@@ -4,7 +4,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 BASE = BASE_DIR / "Disruptiveness-novelty" / "results" / "top5"
 
-# 年份 & 领域
 years = [1999, 2004, 2009]
 fields = ["BMA", "Chemistry", "Pharmacology", "Physics"]
 
@@ -14,10 +13,8 @@ for year in years:
         out_path = BASE / f"{year}{field}_focal_top5_delay_years.csv"
 
         if not in_path.exists():
-            print(f"跳过（文件不存在）：{in_path}")
             continue
 
-        print(f"正在处理: {in_path}")
         df = pd.read_csv(in_path)
 
         results = []
@@ -34,4 +31,3 @@ for year in years:
 
         df_out = pd.DataFrame(results)
         df_out.to_csv(out_path, index=False)
-        print(f"已保存: {out_path}, 共 {len(df_out)} 篇论文")
