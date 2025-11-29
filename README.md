@@ -13,7 +13,7 @@ This folder stores the baseline data for the research samples, constructed from 
 
 ---
 
-## 3. `stata_code`
+## 3. `stata_codes`
 This directory contains the Stata scripts used to estimate the models and generate the corresponding `.docx` regression output tables.
 
 ---
