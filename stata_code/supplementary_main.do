@@ -2,7 +2,7 @@ cd "/Users/zhaoxinhang/Desktop/disruptiveness-novelty/data" // Replace with the 
 use "all-top5.dta", clear
 
 asdoc summarize delay_year novelty author_count first_author_productivity team_productivity inter_coauthorship ///
-    journal_tier Ni_dynamic Nj_dynamic citation_dynamic Ni_foreign_ratio Nj_foreign_ratio, save(Supplementary_Table9.doc) replace title(Table 10. Descriptive statistics and Spearman correlations)
+    journal_tier Ni_dynamic Nj_dynamic citation_dynamic Ni_foreign_ratio Nj_foreign_ratio, save(Supplementary_Table10.doc) replace title(Table 10. Descriptive statistics and Spearman correlations)
 
 asdoc pwcorr delay_year novelty author_count first_author_productivity team_productivity inter_coauthorship ///
     journal_tier Ni_dynamic Nj_dynamic citation_dynamic Ni_foreign_ratio Nj_foreign_ratio, spearman append
