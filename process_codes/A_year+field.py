@@ -73,4 +73,3 @@ for field in fields:
 
         output_ids_file = BASE_DIR / f"{year}{field}_ids_from_primary.csv"
         df_extra_filtered[['id']].to_csv(output_ids_file, index=False)
-        print(f"{year}-{field}: 已保存 focal ids 至 {output_ids_file}")
