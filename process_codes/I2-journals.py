@@ -15,7 +15,6 @@ ISSN_CANDIDATES = ["ISSN", "Issn", "ISSN Print", "ISSN (print)", "ISSN (Print)",
 
 FIELDS_ALLOWED = {"chemistry", "pharmacology", "physics", "bma"}
 
-# ========= 基础函数 =========
 def norm_text(s: str) -> str:
     if pd.isna(s): return ""
     s = str(s).strip().lower()
@@ -48,7 +47,6 @@ def parse_quartile_cell(x) -> Optional[str]:
         return "Unranked"
     return None
 
-# ========= SCImago 处理 =========
 def read_scimago_file(path: str, year: int, field: Optional[str]=None) -> pd.DataFrame:
     df = pd.read_excel(path)
     title_col = find_column(df, TITLE_CANDIDATES)
@@ -109,7 +107,6 @@ def build_scimago_index(scimago_dir: str, fields: List[str]) -> pd.DataFrame:
     full = full.drop_duplicates(subset=["issn_clean", "journal_norm", "year", "field", "quartile"])
     return full
 
-# ========= Quartile helpers =========
 def quartile_mode_excluding_missing(values: List[str]) -> int:
     q_to_num = {"Q1":1, "Q2":2, "Q3":3, "Q4":4, "Unranked":5}
     kept = [q_to_num[v] for v in values if v in q_to_num]
@@ -127,7 +124,6 @@ def quartile_avg_round_excluding_missing(values: List[str]) -> int:
         return 5
     return max(1, min(5, int(round(sum(nums)/len(nums)))))
 
-# ========= Attach quartiles =========
 def attach_quartiles_for_window_title(
     papers: pd.DataFrame,
     scimago_index: pd.DataFrame,
@@ -177,7 +173,6 @@ def attach_quartiles_for_window_title(
     return df
 
 
-# ---------------------------- 主程序入口 ----------------------------
 if __name__ == "__main__":
     BASE = Path(__file__).resolve().parent.parent.parent
     BASE_DIR = BASE / "Disruptiveness-novelty"
@@ -199,8 +194,6 @@ if __name__ == "__main__":
     JOURNAL_COL_PAPERS = "journal"
 
     scimago_idx = build_scimago_index(SCIMAGO_DIR, FIELDS)
-    # print(">>> SJR索引样本:")
-    # print(scimago_idx[["issn_clean", "journal_norm", "year", "quartile"]].dropna().head(10))
 
     for in_path, out_path, fixed_pub_y in INPUTS:
         if not os.path.exists(in_path):
