@@ -7,14 +7,12 @@ import pyarrow.parquet as pq
 from tqdm import tqdm
 from multiprocessing import Pool, cpu_count
 
-# ========== Path ==========
 INPUT_FOLDER = '/Users/zhaoxinhang/openalex-snapshot/data/works'
 CHUNK_FOLDER = '/Users/zhaoxinhang/openalex-references-parquet/chunks'
 FINAL_OUTPUT = '/Users/zhaoxinhang/openalex-references.parquet'
 
 os.makedirs(CHUNK_FOLDER, exist_ok=True)
 
-# ========== Parquet schema ==========
 schema = pa.schema([
     ("id", pa.string()),
     ("publication_date", pa.string()),
@@ -24,7 +22,6 @@ schema = pa.schema([
 BATCH_SIZE = 10000
 ALLOWED_FIELDS = set(schema.names)
 
-# ========== Single .gz processing ==========
 def extract_references_streaming(gz_file):
     input_path = os.path.join(INPUT_FOLDER, gz_file)
     output_path = os.path.join(CHUNK_FOLDER, gz_file.replace('.gz', '.parquet'))
@@ -71,7 +68,6 @@ def extract_references_streaming(gz_file):
         if writer:
             writer.close()
 
-# ========== Merging all Parquet ==========
 def merge_parquet_chunks():
     parquet_files = []
     for root, _, files in os.walk(CHUNK_FOLDER):
@@ -96,7 +92,6 @@ def merge_parquet_chunks():
                 print(f"Fail to merge {fpath}：{e}")
     print(f"Complete merging：{FINAL_OUTPUT}")
 
-# ========== 主函数 ==========
 def main(args):
     if not args.merge_only:
         gz_files = [
@@ -112,7 +107,6 @@ def main(args):
     if not args.extract_only:
         merge_parquet_chunks()
 
-# ========== CLI ==========
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Extract and merge OpenAlex references")
     parser.add_argument('--extract-only', action='store_true', help="Only extracting")
