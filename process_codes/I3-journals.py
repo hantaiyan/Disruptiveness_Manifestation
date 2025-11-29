@@ -5,10 +5,8 @@ import pandas as pd
 from pathlib import Path
 from pathlib import Path
 
-# ========= 基础路径 ==========
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-# ========= 基础路径 ==========
 BASE = BASE_DIR / "Disruptiveness-novelty"
 TOP5_DIR = BASE / "results" / "top5"
 
@@ -16,13 +14,11 @@ TARGET_COLS = ["SJR Best Quartile", "quartile_mode_15y", "quartile_avg_round_15y
 UNRANKED_ALIASES = {"-", "UNRANKED", "NONE", ""}
 
 def norm_quartile(val):
-    """标准化为 Q1..Q4 或 Unranked"""
     if pd.isna(val):
         return "Unranked"
     s = str(val).strip().upper().replace(" ", "")
     if s in {"Q1","Q2","Q3","Q4"}: return s
     if s in UNRANKED_ALIASES: return "Unranked"
-    # 数字兼容
     try:
         f = float(s)
         if f==1: return "Q1"
@@ -49,18 +45,16 @@ def process_file(path: Path):
             df[norm_col] = df[col].apply(norm_quartile)
             for k, mp in MAPPINGS.items():
                 df[f"{col}_{k}"] = df[norm_col].map(mp)
-    # 兼容旧的 quartile_numeric：基于 SJR Best Quartile 的 bin_Q1
     if "SJR Best Quartile__norm" in df.columns:
         df["quartile_numeric"] = df["SJR Best Quartile__norm"].map(MAPPINGS["bin_Q1"])
 
     out = path.with_name(path.name.replace("_with_15y_quartiles.csv","_focal_with_quartiledata.csv"))
     df.to_csv(out,index=False)
-    print(f"完成：{out}")
 
 def main():
     files = glob.glob(str(TOP5_DIR / "*_with_15y_quartiles.csv"))
     if not files:
-        print("没找到任何 *_with_15y_quartiles.csv 文件")
+        print("Not Found")
     for f in files:
         process_file(Path(f))
 
