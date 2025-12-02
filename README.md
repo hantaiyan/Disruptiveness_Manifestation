@@ -21,3 +21,6 @@ This directory contains the Stata scripts used to estimate the models and genera
 ## 4. `data`
 This folder includes the research samples and results used in the manuscript.
 
+OpenAlex: https://openalex.org
+Arts et al's work: Arts S, Melluso N, Veugelers R (2023). Beyond Citations: Measuring Novel Scientific Ideas and their
+Impact in Publication Text. https://doi.org/10.48550/arXiv.2309.16437
